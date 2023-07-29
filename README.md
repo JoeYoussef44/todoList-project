@@ -4,8 +4,8 @@ Description
 The Todo List web application allows users to manage their tasks in a simple and organized manner. Users can add new tasks, mark tasks as completed, and delete tasks. The application also persists the task data using local storage, so the tasks are retained even after the user closes the page.
 
 Installation
-1 - Install the necessary dependencies : npm install
-2 - Start the development server : npm start
+- Install the necessary dependencies : npm install (node-modules file not existing)
+- Start the development server : npm start
 
 Usage
 
