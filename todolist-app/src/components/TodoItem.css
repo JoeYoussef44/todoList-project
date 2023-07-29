@@ -1,0 +1,110 @@
+/* TodoItem.css */
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Set the width to 100% */
+    max-width: 1000px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .todo-item.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  .task-details {
+    flex-grow: 1;
+    display: flex; /* Use flexbox to align the table content horizontally */
+    align-items: center;
+  }
+  
+  .task-details table {
+    width: 100%;
+    table-layout: fixed; /* Use fixed table layout to distribute width evenly */
+  }
+  
+  .task-details td {
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent wrapping of content in each cell */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
+  }
+  
+  .task-details th {
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: left;
+  }
+  
+  .action-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .action-buttons label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .check-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #333;
+    border-radius: 3px;
+  }
+  
+  .checkmark:before {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 8px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .check-container input:checked ~ .checkmark:before {
+    display: block;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
